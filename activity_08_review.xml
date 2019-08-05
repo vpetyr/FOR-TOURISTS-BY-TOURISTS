@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_08_Review">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/logo_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView0802"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/acme"
+                    android:text="@string/Username"
+                    android:textAllCaps="false"
+                    android:gravity="fill"
+                    android:textSize="20dp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/button0805"
+                    android:layout_width="10dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/acme"
+                    android:text="Logout"
+                    android:onClick="logoutButton"
+                    android:textAllCaps="false"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="563dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView0804"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Attractions in London:"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView0805"
+                    android:layout_width="288dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded"
+                    android:fontFamily="@font/acme"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="310dp"
+                    android:layout_marginTop="10dp"
+                    android:scrollbars="vertical">
+                </android.support.v7.widget.RecyclerView>
+
+                <RatingBar
+                    android:id="@+id/ratingBar0801"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:numStars="5"
+                    android:stepSize=".5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editText0801"
+                        android:layout_width="311dp"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/a"
+                        android:ems="10"
+                        android:hint="Write a Review..."
+                        android:inputType="textPersonName" />
+
+                    <Button
+                        android:id="@+id/button0806"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/buttonshape_3"
+                        android:drawableStart="@drawable/iconfinder_next_4200554"
+                        android:drawableEnd="@drawable/iconfinder_next_4200554"
+                        android:onClick="angryButton" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
